@@ -24,13 +24,9 @@ function splitSentence(sentence) {
 
 function concatName(nomeItem) {
   // seu código aqui
-  nomeItem = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-
-
-    nomeItem = (nomeItem[nomeItem.length -1] + ', ' + nomeItem[0]);
-     return nomeItem
+  return nomeItem[nomeItem.length -1] + ', ' + nomeItem[0];
 }
-console.log(concatName())
+
 // Desafio 5
 function footballPoints() {
   // seu código aqui
