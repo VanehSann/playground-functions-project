@@ -1,10 +1,11 @@
 // Desafio 1
 function compareTrue(valorUm, valorDois) {
   // seu código aqui
-  if(valorUm === true && valorDois === true){
-     return true;
- }
-  else{ return false}
+  if (valorUm === true && valorDois === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 // Desafio 2
 function calcArea(base,height) {
@@ -47,10 +48,11 @@ function highestCount(repeatMaxNumber) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  
 }
-
+catAndMouse(2, 3, 2)
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
