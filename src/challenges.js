@@ -1,11 +1,10 @@
 // Desafio 1
-function compareTrue(valorUm, valorDois) {
+function compareTrue(valorUm,valorDois) {
   // seu código aqui
-  if (valorUm === true && valorDois === true) {
-    return true;
-    }
-
-  }
+  if(valorUm === true && valorDois === true){
+     return true
+ }
+  else{ return false}
 
 // Desafio 2
 function calcArea(base,height) {
