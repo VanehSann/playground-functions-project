@@ -19,10 +19,14 @@ function splitSentence(sentence) {
   // seu código aqui
   return sentence.split(" ")
 }
-console.log(splitSentence("comida velha"))
+
 // Desafio 4
-function concatName() {
+
+function concatName(nomeItem) {
   // seu código aqui
+  nomeItem = [ ];
+   nomeItem = (nomeItem[nomeItem.length -1] + ', ' + nomeItem[0]);
+     return nomeItem
 }
 
 // Desafio 5
