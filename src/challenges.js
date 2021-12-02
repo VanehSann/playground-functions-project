@@ -1,12 +1,11 @@
 // Desafio 1
-function compareTrue(valorUm,valorDois) {
+function compareTrue(valorUm, valorDois) {
   // seu código aqui
-  if(valorUm === true && valorDois === true){
-     return true
- }
-  else{ return false}
+  if (valorUm === true && valorDois === true) {
+    return true;
+    }
 
-}
+  }
 
 // Desafio 2
 function calcArea(base,height) {
@@ -14,12 +13,13 @@ function calcArea(base,height) {
   let formulaArea = (base * height)/2;
   return formulaArea 
 }
-console.log(calcArea(51,1))
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
 
+// Desafio 3
+function splitSentence(sentence) {
+  // seu código aqui
+  return sentence.split(" ")
+}
+console.log(splitSentence("comida velha"))
 // Desafio 4
 function concatName() {
   // seu código aqui
