@@ -81,11 +81,14 @@ function fizzBuzz(numero) {
 }
 
 // Desafio 9
-function encode() {
+function encode(nomeEncode) {
   // seu código aqui
-}
-function decode() {
+  let novoNome = nomeEncode.replace(/a/g, "1").replace(/e/g, "2").replace(/i/g, "3").replace(/o/g, "4").replace(/u/g, "5")
+return novoNome}
+function decode(nomeDecode) {
   // seu código aqui
+  let novoNome = nomeDecode.replace(/1/g, "a").replace(/2/g, "e").replace(/3/g, "i").replace(/4/g, "o").replace(/5/g, "u")
+  return novoNome
 }
 
 module.exports = {
