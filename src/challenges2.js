@@ -58,71 +58,25 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate(string) {
-// seu código aqui
-// criando um array com os numeros tipo string da frase
-// Por exemplo, aplicando /\d+/ em "123abc" encontra "123" - developer.mozilla.org
-// Without the g flag, it'll only test for the first. - https://stackoverflow.com/
+function segundaFunc(string) {
   let numb = string.match(/\d+/g);
   let result = 0;
   for (let i = 0; i < numb.length; i += 1) {
-    if (numb[i] === '1') {
-      result += 1;
-    }
-    if (numb[i] === '2') {
-      result += 2;
-    }
-    if (numb[i] === '3') {
-      result += 3;
-    }
-    if (numb[i] === '4') {
-      result += 4;
-    }
-    if (numb[i] === '5') {
-      result += 5;
-    }
-    if (numb[i] === '6') {
-      result += 6;
-    }
-    if (numb[i] === '7') {
-      result += 7;
-    }
-    if (numb[i] === '8') {
-      result += 8;
-    }
-    if (numb[i] === '9') {
-      result += 9;
-    }
+    result += Number(numb[i]);
   }
-  if (result === 1) {
-    return '1 copo de água';
-  }
-  if (result === 2) {
-    return '2 copos de água';
-  }
-  if (result === 3) {
-    return '3 copos de água';
-  }
-  if (result === 4) {
-    return '4 copos de água';
-  }
-  if (result === 5) {
-    return '5 copos de água';
-  }
-  if (result === 6) {
-    return '6 copos de água';
-  }
-  if (result === 7) {
-    return '7 copos de água';
-  }
-  if (result === 8) {
-    return '8 copos de água';
-  }
-  if (result === 9) {
-    return '9 copos de água';
+  return result;
+}
+function hydrate(string) {
+  let segunda = segundaFunc(string);
+  for (let k = 1; k < 10; k += 1) {
+    if (segunda === 1) {
+      return '1 copo de água';
+    }
+    if (segunda === k) {
+      return `${k} copos de água`;
+    }
   }
 }
-
 module.exports = {
   generatePhoneNumber,
   techList,

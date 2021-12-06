@@ -61,7 +61,7 @@ function fizzBuzz(numero) {
   for (let i = 0; i < numero.length; i += 1) {
     if (numero[i] % 3 === 0 && numero[i] % 5 !== 0) {
       arrayVazio.push('fizz');
-    } else if (numero[i] % 5 === 0 && numero[i] % 3 === 1) {
+    } else if (numero[i] % 5 === 0 && numero[i] % 3 !== 0) {
       arrayVazio.push('buzz');
     } else if (numero[i] % 5 === 0 && numero[i] % 3 === 0) {
       arrayVazio.push('fizzBuzz');
