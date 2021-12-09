@@ -17,55 +17,35 @@ function techList(listaTech, nome) {
   }
   return listaNova;
 }
-
 // Desafio 11
-function checkRepeat3(numberCheck) {
+function generatePhoneNumber(lista) {
+  // seu código aqui
+  if (lista.length > 11 || lista.length < 11 || lista.length === 0) {
+    return 'Array com tamanho incorreto.';
+  }
   let repeatNumber = 0;
-  for (let i = 0; i < numberCheck.length; i += 1) {
-    for (let j = i - 1; j < numberCheck.length; j += 1) {
-      if (numberCheck[j] === numberCheck[i]) {
-        repeatNumber += 0.2;
+  for (let i = 0; i < lista.length; i += 1) {
+    for (let j = i - 1; j < lista.length; j += 1) {
+      if (lista[j] === lista[i]) {
+        repeatNumber += 0.20;
       }
     }
   }
-  return repeatNumber;
-}
-function checks(lista) {
   for (let indexDois = 0; indexDois < lista.length; indexDois += 1) {
     if (lista[indexDois] < 0 || lista[indexDois] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  return true;
-}
-function checkks(lista) {
-  let repeatNumber = 0;
-  let checkk = checks(lista);
   for (let index = 0; index < lista.length; index += 1) {
-    repeatNumber = lista[index];
-    if ((checkk = true || repeatNumber === 3)) {
-      return true;
+    if (lista[index] < 0 || lista[index] > 9 || repeatNumber >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
+  return `(${lista[0]}${lista[1]}) ${lista[2]}${lista[3]}${lista[4]}${lista[5]}${lista[6]}-`
+    + `${lista[7]}${lista[8]}${lista[9]}${lista[10]}`;
 }
-function generatePhoneNumber(lista) {
-  // seu código aqui
-  let checando = checkks(lista);
-  if (lista.length === 11) {
-    for (let index = 0; index < lista.length; index += 1) {
-      if (checando === true) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      } 
-        return (
-          `(${lista[0]}${lista[1]}) ${lista[2]}${lista[3]}${lista[4]}${lista[5]}${lista[6]}` +
-          `-${lista[7]}${lista[8]}${lista[9]}${lista[10]}`
-        );
-      
-    }
-  }
-
-  return 'Array com tamanho incorreto.';
-}
+// let lista = [1, 2, 3, 4, 5, 6, 9, 9, 9, 0, -1];
+// console.log(generatePhoneNumber(lista))
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
