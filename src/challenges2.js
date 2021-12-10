@@ -19,16 +19,21 @@ function techList(listaTech, nome) {
 }
 // Desafio 11
 // função de repetição de 3
+// inspirado para refatorar https://stackoverflow.com/questions/19395257/how-to-count-duplicate-value-in-an-array-in-javascript
+function repeatTimes32(lista) {
+  let repeatNumber = [];
+  lista.forEach(function (i) { repeatNumber[i] = (repeatNumber[i] || 0) + 1; });
+  return repeatNumber;
+}
 function repeatTimes3(lista) {
-  let repeatNumber = 0;
-  for (let i = 0; i < lista.length; i += 1) {
-    for (let j = i - 1; j < lista.length; j += 1) {
-      if (lista[j] === lista[i]) {
-        repeatNumber += 0.20;
-      }
+  let teste = 0;
+  let repeatNumberr = repeatTimes32(lista);
+  for (let i = 0; i < repeatNumberr.length; i += 1) {
+    if (repeatNumberr[i] >= 3) {
+      teste += 1;
     }
   }
-  return repeatNumber;
+  return teste;
 }
 // funcao de tamanho menor que zero e numero individual maior que 11
 function checando1(lista) {
@@ -49,7 +54,7 @@ function generatePhoneNumber(lista) {
   if (lista.length === 11) {
     let repetion = repeatTimes3(lista);
     let checkizinho = checando1(lista);
-    if (repetion >= 3 || checkizinho > 5 || checkizinho < 4.5) {
+    if (repetion >= 1 || checkizinho > 5 || checkizinho < 4.5) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     return `(${lista[0]}${lista[1]}) ${lista[2]}${lista[3]}${lista[4]}${lista[5]}${lista[6]}-`
